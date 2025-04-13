@@ -20,7 +20,7 @@ function HomePage() {
       <section>
         <div className="flex flex-row relative">
           <img
-            className="h-screen w-screen object-fill opacity-70 border-b-4 border-stone-400"
+            className="h-screen w-screen object-fill opacity-70 border-b-4 border-stone-500"
             src={building}
             alt="building"
           />
