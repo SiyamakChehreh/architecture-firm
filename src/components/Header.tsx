@@ -11,6 +11,10 @@ import HamburgerMenu from "../assets/images/hamburger-menu-icon.svg";
 export default function Header() {
   const [isOpen, setIsOpen] = useState(false);
 
+  const handleClick = () => {
+    setIsOpen(!isOpen);
+  };
+
   return (
     <div>
       <div>
@@ -72,20 +76,75 @@ export default function Header() {
             </li>
           </ul>
         </nav>
-        <div className="md:hidden flex relative">
-          <div className="text-md font-boldonse">
-            <Link to="/">
-              Archa
-              <span className="text-sky-600 text-md">Design</span>
-            </Link>
+        <nav className="py-3">
+          <div className="md:hidden flex justify-around items-start">
+            <div className="text-md font-boldonse">
+              <Link to="/">
+                Archa
+                <span className="text-sky-600 text-md">Design</span>
+              </Link>
+            </div>
+            <div className="flex gap-4">
+              <Link to="#">
+                <img className="size-6" src={X} />
+              </Link>
+              <Link className="size-6" to="#">
+                <img src={instagram} />
+              </Link>
+              <Link to="#">
+                <img className="size-6" src={facebook} />
+              </Link>
+              <Link to="#">
+                <img className="size-7" src={Telegram} />
+              </Link>
+            </div>
+            <button className="">
+              <img
+                className="size-6 right-4"
+                src={HamburgerMenu}
+                onClick={handleClick}
+              />
+            </button>
           </div>
-          <button>
-            <img
-              className="w-6 h-9 absolute top-0 right-4"
-              src={HamburgerMenu}
-            />
-          </button>
-        </div>
+          {isOpen && (
+            <div className="md:hidden px-4 pb-4 bg-white shadow-md">
+              <Link
+                to="/about"
+                className="block py-2 text-gray-700 hover:text-blue-600"
+                onClick={(e) => {
+                  let about = document.getElementById("about");
+                  e.preventDefault();
+                  about && about.scrollIntoView({ behavior: "smooth" });
+                }}
+              >
+                درباره ی ما
+              </Link>
+              <Link
+                to="/architects"
+                className="block py-2 text-gray-700 hover:text-blue-600"
+                onClick={(e) => {
+                  let architects = document.getElementById("architects");
+                  e.preventDefault();
+                  architects &&
+                    architects.scrollIntoView({ behavior: "smooth" });
+                }}
+              >
+                تیم معماران
+              </Link>
+              <Link
+                to="/projects"
+                className="block py-2 text-gray-700 hover:text-blue-600"
+                onClick={(e) => {
+                  let project = document.getElementById("projects");
+                  e.preventDefault();
+                  project && project.scrollIntoView({ behavior: "smooth" });
+                }}
+              >
+                پروژه های ما
+              </Link>
+            </div>
+          )}
+        </nav>
       </div>
     </div>
   );
