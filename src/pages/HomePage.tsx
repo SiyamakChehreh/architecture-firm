@@ -1,5 +1,3 @@
-import AboutPage from "./AboutPage";
-import ArchitectsPage from "./ArchitectsPage";
 import building from "../assets/images/building.jpg";
 import { useState } from "react";
 
@@ -24,11 +22,13 @@ function HomePage() {
             src={building}
             alt="building"
           />
-          <div className="absolute left-10 flex flex-col h-screen w-160 border-4 border-y-1  border-gray-800/5 hover:border-gray-800/30 bg-gray-300/20 hover:bg-gray-300/70 transition-colors duration-700">
-            <div className="mt-30 ml-15 absolute">
-              <h1 className="text-5xl font-boldonse">Pay Less </h1>
-              <h1 className="text-5xl font-boldonse mt-3">Gain More!</h1>
-              <p className="text-xl/9 my-4 font-underdog text-justify mr-5">
+          <div className="absolute right-10 top-10 w-160 transition-colors duration-700">
+            <div className="mt-40 ml-15 absolute flex flex-col items-end">
+              <h1 className="text-5xl font-boldonse text-right">Pay Less </h1>
+              <h1 className="text-5xl font-boldonse text-right mt-3">
+                Gain More!
+              </h1>
+              <p className="text-xl/9 my-4 font-underdog text-right mr-5">
                 {showContent}
               </p>
               <button
@@ -40,14 +40,6 @@ function HomePage() {
             </div>
           </div>
         </div>
-      </section>
-      <section>
-        <div>
-          <AboutPage />
-        </div>
-      </section>
-      <section>
-        <ArchitectsPage />
       </section>
     </div>
   );

@@ -1,10 +1,14 @@
+import ImageSlider from "../components/ImageSlider";
+
 export default function ProjectsPage() {
   return (
-    <section
-      id="projects"
-      className="h-screen flex items-center justify-center bg-green-500 text-white snap-start"
-    >
-      <div>Projects Page</div>
+    <section id="projects" className="h-screen w-screen">
+      <div className="h-screen w-screen grid grid-cols-2 gap-5 m-10">
+        <ImageSlider />
+        <ImageSlider />
+        <ImageSlider />
+        <ImageSlider />
+      </div>
     </section>
   );
 }
