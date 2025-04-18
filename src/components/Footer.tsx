@@ -9,7 +9,7 @@ import Phone from "../assets/images/phone.svg";
 export default function Footer() {
   return (
     <section>
-      <footer className="h-100 w-screen bg-amber-50 flex flex-col justify-start pt-4 items-center relative border-t-8 border-double border-neutral-500">
+      <footer className="h-100 w-screen bg-amber-50 flex flex-col justify-start pt-5 items-center relative border-t-8 border-double border-neutral-500">
         <h1 className="absolute bottom-2 left-3 font-bold">
           Copyright © 2025 Archa Design company. All Rights Reserved.
         </h1>
