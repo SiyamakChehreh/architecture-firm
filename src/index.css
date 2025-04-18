@@ -1,0 +1,35 @@
+@import url("https://fonts.googleapis.com/css2?family=Boldonse&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Lalezar&display=swap");
+@font-face {
+  font-family: Underdog;
+  src: url("./assets/fonts/Underdog-Regular.ttf");
+}
+@import "tailwindcss";
+
+@property --border-angle {
+  syntax: "<angle>";
+  inherits: false;
+  initial-value: 0deg;
+}
+
+@theme {
+  --animate-rotate-border: border-rotate 2s linear infinite;
+
+  @keyframes border-rotate {
+    to {
+      --border-angle: 360deg;
+    }
+  }
+}
+
+@theme {
+  --font-boldonse: "Boldonse", "sans-serif";
+}
+
+@theme {
+  --font-underdog: Underdog, "sans-serif";
+}
+
+@theme {
+  --font-lalezar: "Lalezar", "sans-serif";
+}
